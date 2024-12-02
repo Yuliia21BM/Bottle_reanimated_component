@@ -2,11 +2,17 @@ import React from "react";
 import Svg, { Path, Rect, G, Defs, ClipPath } from "react-native-svg";
 import { LIQUID_MIN_Y_POSITION, VIEWBOX_DIMENSION } from "../utils/constants";
 
-export const BottleSvg = ({ liquidHeight }: { liquidHeight: number }) => (
+export const BottleSvg = ({
+  liquidHeight,
+  height,
+}: {
+  liquidHeight: number;
+  height?: number;
+}) => (
   <Svg
     fill="#000000"
-    height={LIQUID_MIN_Y_POSITION}
-    width={LIQUID_MIN_Y_POSITION}
+    height={height ?? LIQUID_MIN_Y_POSITION}
+    width={height ?? LIQUID_MIN_Y_POSITION}
     id="Capa_1"
     viewBox={`0 0 ${VIEWBOX_DIMENSION} ${VIEWBOX_DIMENSION}`}
   >
